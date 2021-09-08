@@ -1,0 +1,27 @@
+
+.main{display: flex;
+margin-top: 50rpx;}
+.item{height: 70rpx;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.detail{text-align: center;
+font-size: 26rpx;width: 33%;}
+.detail image{width: 120rpx;}
+.side{flex: 2;height: 1100rpx;}
+.content{flex: 8;height: 1100rpx;}
+.title{
+
+height: 100rpx;
+display: flex;
+justify-content: center;
+align-items: center;}
+.b{display: flex;
+    
+    flex-wrap: wrap;}
+    .active{color: lightsteelblue;
+    border-left: 5rpx solid lightsteelblue;}
+

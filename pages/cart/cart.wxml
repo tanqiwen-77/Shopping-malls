@@ -1,0 +1,49 @@
+<view class="container">
+    <view class="dizhi">
+    <view wx:if="{{address}}">
+        <view class="user_info">
+      <view>{{address.userName}}</view>
+      <view>{{address.all}}</view>
+    </view>
+    <view class="user_phone">{{address.telNumber}}</view>
+    </view>
+    <view wx:else>
+        <button bindtap="handleaddress">获取收货地址</button>
+    </view>
+    </view>
+    <view class="title">购物车</view>
+    <view wx:if="{{cart.length==0}}">
+       <image src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" ></image>
+ 
+    </view>
+    <view wx:else >
+     <navigator wx:for="{{cart}}" wx:key="goods_id" class="item">
+        <view class="check">
+        <checkbox data-id="{{item.goods_id}}" checked="{{item.checked}}" bindtap="handlecheck"></checkbox>
+       </view>
+        <image src="{{item.goods_small_logo}}" />
+        <view >
+            <view >{{item.goods_name}}</view>
+            <view class="price">
+                ￥{{item.goods_price}}
+            </view>
+            <view class="oper">
+                <view data-id="{{item.goods_id}}" data-operation="{{-1}}" bindtap="handleedit" class="num">-</view>
+                    <view >{{item.num}}</view>
+                <view data-id="{{item.goods_id}}" data-operation="{{1}}" bindtap="handleedit" class="num">+</view>
+               
+            </view>
+        </view>
+     </navigator>
+    </view>
+    <view class="bot">
+        <checkbox checked="{{allcheck}}" bindtap="handleall" />
+        <view class="text">
+            <view >合计￥{{allprice}}</view>
+            <view >包含运费</view>
+        </view>
+        <view bindtap="handlepay" class="pay">
+            结算({{allnum}})
+        </view>
+    </view>
+</view>

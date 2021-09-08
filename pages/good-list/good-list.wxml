@@ -1,0 +1,20 @@
+<view class="container">
+    <search></search>
+    <view class="tabs" >
+    <view wx:for="{{tabs}}" wx:key="*this" class="tab {{current==index?'active':''}}" 
+    bindtap="handle" data-index="{{index}}">
+        {{item}}
+    </view>
+    </view>
+    <navigator wx:for="{{goodlist}}" wx:key="cat_id" class="item" url="../good-detail/good-detail?goods_id={{item.goods_id}}">
+        <view class="img">
+    <image src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"/>
+    </view>
+    <view class="text">
+        <view class="name">{{item.goods_name}}</view>
+        <view >
+           ￥{{item.goods_price}}
+        </view>
+    </view>
+</navigator>
+</view>

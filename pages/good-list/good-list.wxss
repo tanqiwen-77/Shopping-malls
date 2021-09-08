@@ -1,0 +1,25 @@
+.tabs{
+    display: flex;
+}
+.tab{flex: 1;
+    text-align: center;
+}
+.active{
+    border-bottom: 10rpx solid lightblue;
+}
+.item{display: flex;height: 300rpx;
+border-bottom: 5rpx solid lightgrey;}
+.item image{height: 250rpx;width: 300rpx;}
+.img{width: 300rpx;
+display: flex;
+justify-content: center;
+align-items: center;}
+.name{display:-webkit-box;
+    -webkit-box-orient: vertical;
+line-clamp: 2;
+overflow: hidden;
+}
+.text{display: flex;
+flex-direction: column;
+justify-content: space-around;
+}

@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view >
+ <view class="btn-area">
+ <search></search>
+  <view class="swiper1">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+     
+        >
+        <swiper-item
+      wx:for="{{backgroun}}"
+      wx:key="goods_id"
+        
+      >
+        <navigator url="{{item.navigator_url}}">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+      </swiper>
+    </view>
+    <view  wx:for="{{list}}"
+      wx:key="name" class="list">
+<navigator url="{{item.navigator_url}}">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </view>
+      <view  wx:for="{{shop}}"
+      wx:key="floor_title" class="shop"
+      wx:for-item="item1">
+      <image class="title" mode="widthFix" src="{{item1.floor_title.image_src}}" ></image>
+       <view  wx:for="{{item1.product_list}}"
+      wx:key="name" 
+      wx:for-item="item2"
+       wx:for-index="index2">
+<navigator url="{{item2.navigator_url}}" class="tu">
+          <image mode="{{index2===0?'widthFix':'scaleToFill'}}"  src="{{item2.image_src}}"></image>
+        </navigator>
+      </view>
+      </view>
+</view>
+</view>

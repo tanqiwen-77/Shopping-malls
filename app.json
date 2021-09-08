@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/auth/auth",
+    "pages/order/order",
+    "pages/cart/cart",
+    "pages/category/category",
+    
+    "pages/good-list/good-list",
+    
+    "pages/index/index"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#585858",
+    "navigationBarTitleText": "小谭优购",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icon/Home.png",
+        "selectedIconPath": "./icon/Home (1).png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "./icon/Explore.png",
+        "selectedIconPath": "./icon/Explore (1).png"
+      }
+      ,
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./icon/购物车.png",
+        "selectedIconPath": "./icon/购物车 (1).png"
+      }
+      ,
+      {
+        "pagePath": "pages/auth/auth",
+        "text": "我的",
+        "iconPath": "./icon/人.png",
+        "selectedIconPath": "./icon/人 (1).png"
+      }
+    ]
+  }
+  
+}
